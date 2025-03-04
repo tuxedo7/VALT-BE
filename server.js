@@ -46,9 +46,6 @@ database.once("connected", () => {
 //     res.status(200).json({imageUrl});
 // });
 
-
-
-
 app.use("/", addevent);
 app.use("/", addorganizers);
 app.use("/", prevHome);

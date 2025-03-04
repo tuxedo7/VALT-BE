@@ -15,6 +15,19 @@ router.get("/getallevent", async (req, res) => {
     }
 });
 
+router.get("/getallids", async (req, res) => {
+
+    try {
+        const cards = await Events.find ();
+        const ids = cards.map(card => card._id);
+
+        res.status(200).json(ids);
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get("/getevent/:id", async (req, res) => {
 
     try {
